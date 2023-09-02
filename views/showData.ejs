@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Sacramento&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <title>Registered users </title>
+</head>
+<style>
+  body {
+      background-color: #E4F9F5;
+  }
+  
+  nav {
+      margin: 0px;
+      text-align: center;
+      font-family: 'Merriweather', serif;        
+  }
+
+  .bottom-container {
+      background-color: #66BFBF;
+      padding: 50px 0 20px;
+  }
+
+  .footer-link {
+      color: #11999E;
+      font-family: 'Montserrat', sans-serif;
+      position: relative;
+      line-height: 2;
+  }
+
+  .copyright {
+      color: #EAF6F6;
+      font-size: 0.75rem;
+      padding: 20px 0px;
+  }
+
+  .bottom-container a {
+      margin: 10px 20px;
+      text-decoration: none;
+  }
+
+  .bottom-container a:hover {
+      color: #EAF6F6;
+  }
+</style>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary p-0">
+    <div class="container-fluid px-3 my-0" style="background-color: #11999E;">
+        <a class="navbar-brand" href="/">Priyanshu<br>Rathore</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="border border-1 ms-2" style="min-height: 50px;"></div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto ps-4 pb-2 mb-lg-0">
+            <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="/register">Register</a>
+            </li>
+            <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Data
+            </a>
+            <ul class="dropdown-menu" style="width: 30px;">
+                <li><a class="dropdown-item" href="/show">Show Data</a></li>
+                <li><a class="dropdown-item" href="/analysis">Analysis</a></li>
+            </ul>
+            </li>
+        </ul>
+        </div>
+    </div>
+    </nav>
+    <div class="text-center m-5">
+        <h1 class="display-4 pb-2">Registered</h1>
+        <div class="overflow-x-auto">
+            <table class="table text-nowrap table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First Name</th>
+                    <th scope="col">Middle Name</th>
+                    <th scope="col">Last Name</th>
+                    <th scope="col">Date of birth</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Mobile Number</th>
+                    <th scope="col">Address(part I)</th>
+                    <th scope="col">Address(part II)</th>
+                    <th scope="col">City</th>
+                    <th scope="col">State</th>
+                    <th scope="col">Pincode</th>
+                    <th scope="col">10th Percentage</th>
+                    <th scope="col">12th Percentage</th>
+                    <th scope="col">Current Semester</th>
+                    <th scope="col">SEM I</th>
+                    <th scope="col">SEM II</th>
+                    <th scope="col">SEM III</th>
+                    <th scope="col">SEM IV</th>
+                    <th scope="col">SEM V</th>
+                    <th scope="col">SEM VI</th>
+                    <th scope="col">SEM VII</th>
+                    <th scope="col">SEM VIII</th>
+                    <th scope="col">Resume Link</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <% users.forEach((user, idx) => { %>
+                        <tr>
+                          <th scope="row"><%= (idx+1) %></th>
+                          <% keys.forEach((key) => { %>
+                            <td><%= user[key] ? user[key] : '' %></td>
+                          <% }) %>
+                        </tr>
+                    <% }) %>
+                </tbody>
+              </table>
+        </div>
+        <form action="/" method="get">
+            <button class="btn btn-danger btn-lg mx-2 my-4" type="submit">Home</button>
+        </form>
+    </div>
+    <footer class="bottom-container text-center">        
+      <a class="footer-link" href="https://www.linkedin.com/in/priyanshu-rathore-a6843115a">LinkedIn</a>
+      <a class="footer-link" href="https://github.com/Priyanshu120503">GitHub</a>
+      <p class="copyright"></p>
+    </footer>
+    <script type="text/javascript">
+      window.onload = () => {
+          let c = document.querySelector(".copyright");
+          let d = new Date();
+          c.textContent = "© " + d.getFullYear() + " Priyanshu Rathore.";
+      }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>

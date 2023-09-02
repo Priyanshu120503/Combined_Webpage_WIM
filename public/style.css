@@ -1,0 +1,166 @@
+body {
+    margin: 0px;
+    text-align: center;
+    font-family: 'Merriweather', serif;
+}
+
+h1 {
+    font-size: 5.625rem;      /* 16px = 100% = 1em    for h1*/
+    margin: 50px auto 0 auto;    /* auto - it automatically sets the margin so that the element is in the center. */
+    /*     top  right bottom left*/
+    font-family: 'Sacramento', cursive;
+    color: #66BFBF;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: normal;
+    color: #66BFBF;
+}
+
+h3 {
+    /* the values are comma seperated so that if first font is not found then second will be applied. We can have as many options as we want
+     font-family: font_1, font_2, font_3 , ..;
+    */
+    font-family: 'Montserrat', sans-serif;
+    color: #11999E
+}
+
+hr {
+    border-style: dotted none none;
+    border-width: 10px;
+    border-color: #EAF6F6;
+    width: 6%;
+    margin: 100px auto;
+}
+
+a {
+    margin: 10px 20px;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #EAF6F6;
+}
+
+p {
+    color: #40514E;
+    line-height: 2;
+}
+
+.top-container {
+    position: relative;
+    padding-top: 100px;
+    background-color: #E4F9F5;
+}
+
+.top-cloud {
+    position: absolute;              
+    /* Something is absolute to a parent which is relative 
+       We want cloud to be absolute w.r.t to the 'div' top-container. 
+       So we make that div's position as relative.
+    */
+    
+    top: 8%;
+    right: 20%;
+}
+
+.bottom-cloud {
+    position: absolute; 
+    left: 20%;
+    top: 50%;
+}
+
+.middle-container {
+    margin: 100px 0px;
+}
+
+.intro {
+    width: 30%;
+    position: relative;
+    margin: auto;
+    line-height: 2;
+}
+
+.contact-msg {
+    width: 40%;
+    margin: 40px auto 60px;
+}
+
+.skills {
+    margin: 80px;
+}
+
+.skill-row {
+    width: 50%;
+    margin: 100px auto 100px; 
+    text-align: left;
+}
+
+.code-image {
+    width: 25%;
+    float: left;                 /* used to place element in the left. The other elements then wrap around on right. See MDN documentation*/
+    margin-right: 30px;
+}
+
+.clash-image {
+    width: 25%;
+    float: right;                  
+    margin-left: 30px;
+}
+
+/* .code-skill-description {
+    clear: left;                    Prevents the element to wrap around anything on its left
+} 
+*/
+
+.contact-me {
+    margin: 80px;
+    line-height: 2.5;
+}
+
+.btn {
+    background: #11CDD4;
+    background-image: -webkit-linear-gradient(top, #11CDD4, #11999E);
+    background-image: -moz-linear-gradient(top, #11CDD4, #11999E);
+    background-image: -ms-linear-gradient(top, #11CDD4, #11999E);
+    background-image: -o-linear-gradient(top, #11CDD4, #11999E);
+    background-image: linear-gradient(to bottom, #11CDD4, #11999E);
+    -webkit-border-radius: 8;
+    -moz-border-radius: 8;
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+}
+  
+.btn:hover {
+    background: #30E3CB;
+    background-image: -webkit-linear-gradient(top, #30E3CB, #2BC4AD);
+    background-image: -moz-linear-gradient(top, #30E3CB, #2BC4AD);
+    background-image: -ms-linear-gradient(top, #30E3CB, #2BC4AD);
+    background-image: -o-linear-gradient(top, #30E3CB, #2BC4AD);
+    background-image: linear-gradient(to bottom, #30E3CB, #2BC4AD);
+    text-decoration: none;
+}
+
+.bottom-container {
+    background-color: #66BFBF;
+    padding: 50px 0 20px;
+}
+
+.footer-link {
+    color: #11999E;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    line-height: 2;
+}
+
+.copyright {
+    color: #EAF6F6;
+    font-size: 0.75rem;
+    padding: 20px 0px;
+}
