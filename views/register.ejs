@@ -249,7 +249,7 @@
     <footer class="bottom-container text-center">        
         <a class="footer-link" href="https://www.linkedin.com/in/priyanshu-rathore-a6843115a">LinkedIn</a>
         <a class="footer-link" href="https://github.com/Priyanshu120503">GitHub</a>
-        <p class="copyright">© 2023 Priyanshu Rathore.</p>
+        <p class="copyright"></p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
     <script type="text/javascript">
@@ -366,15 +366,16 @@
                 method: 'GET'
             };
 
+            let status;
             try {
                 const response = await fetch(url, options);
                 const result = await response.text();
-                console.log(result);
+                status = JSON.parse(result).status;
             } catch (error) {
                 console.error(error);
             }
 
-            return status === 'valid';
+            return status === "valid";
         }
 
     </script>
